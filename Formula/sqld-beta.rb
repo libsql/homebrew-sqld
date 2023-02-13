@@ -3,8 +3,7 @@ class SqldBeta < Formula
   homepage "https://libsql.org"
   # pull from git tag to get submodules
   url "https://github.com/libsql/sqld.git",
-      tag:      "v0.0.1"
-  sha256 "9f659f57f02d601b3bdc8e20f40052646403f54f1d08c475cfda97ce82f09d09"
+      tag:      "v0.2.0"
   license "MIT"
 
   depends_on "rust" => :build
