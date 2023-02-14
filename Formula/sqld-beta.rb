@@ -10,13 +10,7 @@ class SqldBeta < Formula
   depends_on "protobuf"
 
   def install
-    cd "libsql" do
-        system "./configure"
-        system "make"
-    end
     ENV.append "SQLITE3_STATIC", "1"
-    ENV.append "SQLITE3_LIB_DIR", "#{pwd}/libsql/.libs"
-    ENV.append "SQLITE3_INCLUDE_DIR", "#{pwd}/libsql/"
     cd "sqld" do
         system "cargo", "install", *std_cargo_args
     end
