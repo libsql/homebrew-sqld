@@ -10,7 +10,6 @@ class SqldBeta < Formula
   depends_on "protobuf"
 
   def install
-    system "git", "submodule", "update", "--init", "--force", "--recursive", "--depth", "1"
     cd "libsql" do
         system "./configure"
         system "make"
