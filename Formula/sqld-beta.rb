@@ -1,27 +1,27 @@
 class SqldBeta < Formula
-  desc "SQLd is the server-mode binary for libSQL, an Open Contribution fork of SQLite"
+  desc "Server-mode binary for libSQL (sqld), an Open Contribution fork of SQLite"
   homepage "https://libsql.org"
-  # pull from git tag to get submodules
-  url "https://github.com/libsql/sqld.git",
-      tag:      "v0.8.0"
+  url "https://github.com/libsql/sqld/archive/refs/tags/v0.13.0.tar.gz"
+  sha256 "9d7922de58a24267098c54f324c8a84918b889fd393fcecef94e09774836619f"
   license "MIT"
 
+  depends_on "llvm" => :build
+  depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "protobuf"
 
   def install
-    ENV.append "SQLITE3_STATIC", "1"
-    cd "sqld" do
-        system "cargo", "install", *std_cargo_args
-    end
+    system "cargo", "install", *std_cargo_args(path: "sqld")
   end
 
   test do
-      server_port = free_port
-      server_pid = fork { exec bin/"sqld", "--http-listen-addr", "127.0.0.1:#{server_port}" }
-      output = shell_output "curl --retry 5 -s -d '{\"statements\": [\"SELECT * from notable;\"] }' 127.0.0.1:#{server_port}"
-      assert_match "no such table", output 
-  ensure
-    Process.kill "SIGTERM", server_pid
+    server_port = free_port
+    fork do
+      exec bin/"sqld", "--http-listen-addr", "127.0.0.1:#{server_port}"
+    end
+    output = shell_output \
+      "curl --retry 5 --retry-all-errors --retry-delay 1 -s -d '{\"statements\": [\"SELECT * from notable;\"] }' \
+      127.0.0.1:#{server_port}"
+    assert_match "no such table", output
   end
 end
