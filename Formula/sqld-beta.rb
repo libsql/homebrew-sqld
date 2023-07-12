@@ -1,8 +1,8 @@
 class SqldBeta < Formula
   desc "Server-mode binary for libSQL (sqld), an Open Contribution fork of SQLite"
   homepage "https://libsql.org"
-  url "https://github.com/libsql/sqld/archive/refs/tags/v0.15.0.tar.gz"
-  sha256 "f91b186be68742b5927678d94c35830b963fa972429d10cd4ffaf722e7e56b69"
+  url "https://github.com/libsql/sqld/archive/refs/tags/v0.16.3.tar.gz"
+  sha256 "587ce1cae78e002ed0eff14aca97fe5c2880cb220fe29a2da6ea74f467f60812"
   license "MIT"
 
   depends_on "llvm" => :build
