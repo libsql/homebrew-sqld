@@ -1,12 +1,12 @@
 class Sqld < Formula
   if Hardware::CPU.type == :arm
-    url "https://github.com/libsql/sqld/releases/download/v0.21.1/sqld-aarch64-apple-darwin.tar.xz"
-    sha256 "025be46a62f9abe108c57e78c05e2780b653b9ef82f2659fd7140bdf7e6c09b7"
+    url "https://github.com/libsql/sqld/releases/download/v0.21.2/sqld-aarch64-apple-darwin.tar.xz"
+    sha256 "3966c3ae2328942fcec196d7ddb73b3b741f0950e05ba28a42fd166e287bb570"
   else
-    url "https://github.com/libsql/sqld/releases/download/v0.21.1/sqld-x86_64-apple-darwin.tar.xz"
-    sha256 "c34dc1fe69c63638f61f30ed519ba2ec2287ea01c4a46681da578707eafa33f1"
+    url "https://github.com/libsql/sqld/releases/download/v0.21.2/sqld-x86_64-apple-darwin.tar.xz"
+    sha256 "6df2fb55c04ec71c1b809d69d10c7a780172c55fdd5d227a73f188957b1dd97a"
   end
-  version "0.21.1"
+  version "0.21.2"
 
   def install
     bin.install "sqld"
