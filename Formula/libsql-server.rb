@@ -1,12 +1,12 @@
 class LibsqlServer < Formula
   if Hardware::CPU.type == :arm
-    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.10/libsql-server-aarch64-apple-darwin.tar.xz"
-    sha256 "7840adc50ded71720a1355f44af8a2400a1277d9e7d3da6503e8a53f09f7bfb7"
+    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.11/libsql-server-aarch64-apple-darwin.tar.xz"
+    sha256 "e57fb8e0d9225f94959f027e52445d6e43dda099a87d79b2ca913a59883cde7d"
   else
-    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.10/libsql-server-x86_64-apple-darwin.tar.xz"
-    sha256 "3c47baa1890018411e8c2112981991f93249cf78437539fe36535232150d9b44"
+    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.11/libsql-server-x86_64-apple-darwin.tar.xz"
+    sha256 "8e693a43f454bdcaa01019abc52c6efbb4392e3c9fa0a1d2b79f7502f14ee11d"
   end
-  version "0.22.10"
+  version "0.22.11"
 
   def install
     bin.install "sqld"
