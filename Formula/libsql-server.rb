@@ -1,12 +1,21 @@
 class LibsqlServer < Formula
-  if Hardware::CPU.type == :arm
-    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.11/libsql-server-aarch64-apple-darwin.tar.xz"
-    sha256 "e57fb8e0d9225f94959f027e52445d6e43dda099a87d79b2ca913a59883cde7d"
-  else
-    url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.11/libsql-server-x86_64-apple-darwin.tar.xz"
-    sha256 "8e693a43f454bdcaa01019abc52c6efbb4392e3c9fa0a1d2b79f7502f14ee11d"
+  version "0.22.12"
+  on_macos do
+    on_arm do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.12/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "c05f18cbd57830ad46828959cd924253f3e3005ad85ac630c48643f70ac75a14"
+    end
+    on_intel do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.12/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "085bb5ae13fe50e1e6922ddf3d6622457213a5e98644c2c474d9605945108c21"
+    end
   end
-  version "0.22.11"
+  on_linux do
+    on_intel do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.22.12/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "20e1996fdfa328c4f3e95a8aaa62f4efc6c56d530c6eb20ff0d55db9bbe40bc0"
+    end
+  end
 
   def install
     bin.install "sqld"
