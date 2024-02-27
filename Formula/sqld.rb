@@ -1,15 +1,38 @@
 class Sqld < Formula
-  if Hardware::CPU.type == :arm
-    url "https://github.com/libsql/sqld/releases/download/v0.21.9/sqld-aarch64-apple-darwin.tar.xz"
-    sha256 "ccf2057875b7c523398ee8b8bb51ce10589ca848e81f1f95a7819641574daf0e"
-  else
-    url "https://github.com/libsql/sqld/releases/download/v0.21.9/sqld-x86_64-apple-darwin.tar.xz"
-    sha256 "2d1231bc3c0652de060968ee60c58aa58a972447ccd54c9eae4a14724100605a"
+  version "0.23.1"
+  on_macos do
+    on_arm do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.1/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "73c9699b5aafebee1f0d5ab771550e82c6a602caae3f15e29cf56b0bcadad336"
+    end
+    on_intel do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.1/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "30dcc8313a7893f6363ceb8d1533669a641fa3aac9795fac108fc0a1c0a2f387"
+    end
   end
-  version "0.21.9"
+  on_linux do
+    on_intel do
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.1/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5f083b3b66f1a0aeaef8530d4b7c1e406be50ff091f88a1a6e3c031c61363cc1"
+    end
+  end
 
   def install
-    bin.install "sqld"
+    on_macos do
+      on_arm do
+        bin.install "sqld"
+      end
+    end
+    on_macos do
+      on_intel do
+        bin.install "sqld"
+      end
+    end
+    on_linux do
+      on_intel do
+        bin.install "sqld"
+      end
+    end
 
     # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
