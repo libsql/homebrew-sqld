@@ -1,19 +1,19 @@
 class Sqld < Formula
-  version "0.23.4"
+  version "0.23.5"
   on_macos do
     on_arm do
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.4/libsql-server-aarch64-apple-darwin.tar.xz"
-      sha256 "1b8b01b73a14981b0073bc534cef8b67eab8d3dccfe0b4c0cad3ff34f3758a82"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.5/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "3300bf7b6b6c8cc488cea85649dd7129fb118a661b6a06a759f9f33b8231cff1"
     end
     on_intel do
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.4/libsql-server-x86_64-apple-darwin.tar.xz"
-      sha256 "5fbecd8ddb4c37fc3a4bfd9a5ab89468d6c2d7cafc717997321f5b0eae610365"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.5/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "f5c15da39fa238a4785f08af0602d8a0f11d5f5be733d195fcdec86d54aa8fbb"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.4/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cc8f5a2e6f64f4cdf5e73f7ad2c50614be45806b32e55c7cdfffe59fb6014379"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.23.5/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2c7d8bc69897b19cc5009af430203e89021a72ff937b217311522fb81b574e12"
     end
   end
 
