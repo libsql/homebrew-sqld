@@ -1,24 +1,24 @@
 class Sqld < Formula
   desc "The libsql-server application"
-  version "0.24.8"
+  version "0.24.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.8/libsql-server-aarch64-apple-darwin.tar.xz"
-      sha256 "416ffae12effc993a1072d55c45986f0e1252b75a79cffb8740b2a71fc5e7779"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.9/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "d9d9fd1ab14d9dd89b3464fda41e5e91dc5898f236b703c6c9da6bd1cdb4a8e1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.8/libsql-server-x86_64-apple-darwin.tar.xz"
-      sha256 "d32743e50ecb905667cea5ef0e51c0bc84126eface2a26a1d21e2775af9879d5"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.9/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "43584323ad5d03d5a2676b458a29d0ae52771157dfe293003e4a6ef87544907f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.8/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0325dcb9ac8e82ead712fee0d188a492fefb4809efb1834b9c04a45bb168cdae"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.9/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "439509e58b201ad82a56c2a3fccec587d6dbd351773061b2c1cb746b5bb25cbc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.8/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1122a8b682647611993dd1c9c1fd09f9f955a127cb485a1028ef8bf7d6a7ccd1"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.9/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c98d0bc1c1765600ab5f02782196c1b0f0dcebba6714b988e2be957ec101dba4"
     end
   end
 
