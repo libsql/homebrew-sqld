@@ -1,24 +1,24 @@
 class Sqld < Formula
   desc "The libsql-server application"
-  version "0.24.17"
+  version "0.24.18"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.17/libsql-server-aarch64-apple-darwin.tar.xz"
-      sha256 "f7df62883266faca6b8a08350fd22af9d997cea6087474bc2638438160fbc341"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.18/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "c247ffce90f7cfc9e2445caff226e6e368a4213f942d7f8ac04e00f96111a37d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.17/libsql-server-x86_64-apple-darwin.tar.xz"
-      sha256 "bf0496e98d631c819044bb7c866b46133fcf9085d52cdd21cca4beb93912e42c"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.18/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "953364322c1571d8043285715a693005837281c805336139079af895e8677a1f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.17/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0d78facc62e03f75280bd3ecbb3eaeeb375f58af48b106495d5095271c578b5f"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.18/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "31afc99b6933f46290c3eea97d944432339d11eae639529b3efbc0758adbe908"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.17/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5b4ebe4d68b7f3405463ad9f8c2ef3bff0a1bee318efb5c9f47239857b2be974"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.18/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "dce96a085074f845525e6425848b1b8cd52236522c2e3611452dc8335e2cc3a1"
     end
   end
 
