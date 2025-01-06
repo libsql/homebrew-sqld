@@ -1,25 +1,25 @@
 class Sqld < Formula
   desc "The libsql-server application"
   homepage "https://github.com/tursodatabase/libsql"
-  version "0.24.30"
+  version "0.24.31"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.30/libsql-server-aarch64-apple-darwin.tar.xz"
-      sha256 "eba5545bc0e08b1d89d66aa2cfb93ef775b1bf3b00bd8d9723282272710ce016"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.31/libsql-server-aarch64-apple-darwin.tar.xz"
+      sha256 "575b60f7eb47751ffebfe1520756696585649f0d091e7b0268af4ef290fc6ed3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.30/libsql-server-x86_64-apple-darwin.tar.xz"
-      sha256 "b18a92a33922a8505f928f9c0d39e193d2eaa40b49e8753fac4c52d73fbad9e2"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.31/libsql-server-x86_64-apple-darwin.tar.xz"
+      sha256 "13a250781c44210428b4c995d53c05374949b096e0c8fb6cd6dd1e21190cc016"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.30/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f1d90eb6367be702397441557e92c3457ae45f5f368179e17a7eb550bcc6e4d9"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.31/libsql-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b4d5ba7a057f83295606edbdf2433e3c90f3f63f4cbcffa6cd58552d5b9f7323"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.30/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "43450f3b9325ed456391804c41745bda0d11855bdae477cefe62a980ed1ad78b"
+      url "https://github.com/tursodatabase/libsql/releases/download/libsql-server-v0.24.31/libsql-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "edc6e17188d7f2e7c6a76eb7ea21f57f4f90fd49578f16a3884fe433e9ecbd84"
     end
   end
 
